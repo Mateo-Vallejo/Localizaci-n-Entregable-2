@@ -1,7 +1,10 @@
 ﻿using lib_repositorios.Interfaces;
+using lib_entidades;
+using lib_entidades.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,7 +38,7 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Guardar(entidad);
             conexion!.GuardarCambios();
-            conexion!.Separadar(entidad);
+            conexion!.Separar(entidad);
             return entidad;
         }
 
@@ -43,7 +46,7 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Modificar(entidad);
             conexion!.GuardarCambios();
-            conexion!.Separadar(entidad);
+            conexion!.Separar(entidad);
             return entidad;
         }
 
@@ -51,7 +54,7 @@ namespace lib_repositorios.Implementaciones
         {
             conexion!.Borrar(entidad);
             conexion!.GuardarCambios();
-            conexion!.Separadar(entidad);
+            conexion!.Separar(entidad);
             return entidad;
         }
 

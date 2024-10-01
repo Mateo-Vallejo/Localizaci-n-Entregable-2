@@ -1,21 +1,22 @@
-using lib_entidades;
+using lib_entidades.Modelos;
 using lib_repositorios;
 using lib_repositorios.Implementaciones;
 using lib_repositorios.Interfaces;
 
-namespace mst_pruebas
+namespace mst_pruebas.Repositorios
 {
     [TestClass]
-    public class PruebaUnitariaDetallesImagenes
+    public class DetallesImagenesPruebaUnitaria
     {
         private IDetallesImagenesRepositorio? iRepositorio = null;
         private DetallesImagenes? entidad = null;
 
-        public PruebaUnitariaDetallesImagenes()
+        public DetallesImagenesPruebaUnitaria()
         {
             var conexion = new Conexion();
-            conexion.StringConnection = "server=localhost;database=db_notas;uid=sa;pwd=Clas3sPrO2024_!;TrustServerCertificate=true;";
-            iRepositorio = new DetallesImagenesRepositorio(conexion);
+            //conexion.StringConnection = "Server=CARZAXO\\DEV;Database=db_Localizacion;Integrated Security=True;TrustServerCertificate=True;";
+            conexion.StringConnection = "server=localhost;database=db_facturas;Integrated \r\nSecurity=True;TrustServerCertificate=true;";
+           iRepositorio = new DetallesImagenesRepositorio(conexion);
         }
         [TestMethod]
         public void Ejecutar()
@@ -32,10 +33,11 @@ namespace mst_pruebas
         {
             entidad = new DetallesImagenes()
             {
-                Autor = "Test 1",
-                Nombre = "Pepito Perez",
+                Autor = "ITM",
+                Titulo = "SEDE FRATERNIDAD",
                 Fecha = DateTime.Now,
-                Detalles = "Foto",
+                Detalles = "Campus Universitario",
+                Activo = true,
             };
             entidad = iRepositorio!.Guardar(entidad);
             Assert.IsTrue(entidad.Id != 0);

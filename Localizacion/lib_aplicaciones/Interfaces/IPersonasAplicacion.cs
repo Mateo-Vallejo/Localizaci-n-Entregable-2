@@ -2,20 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lib_repositorios.Interfaces
+namespace lib_aplicaciones.Interfaces
 {
-    public interface IPersonasRepositorio
+    public interface IPersonasAplicacion
     {
-        void Configurar(string string_conexion);
         List<Personas> Listar();
-        List<Personas> Buscar(Expression<Func<Personas, bool>> condiciones);
+        List<Personas> Buscar(Personas entidad, string tipo);
         Personas Guardar(Personas entidad);
         Personas Modificar(Personas entidad);
         Personas Borrar(Personas entidad);
-        bool Existe(Expression<Func<Personas, bool>> condiciones);
+
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace lib_entidades
+namespace lib_entidades.Modelos
 {
     public class Imagenes
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
         public string Url { get; set; } = null!;
     }
 }

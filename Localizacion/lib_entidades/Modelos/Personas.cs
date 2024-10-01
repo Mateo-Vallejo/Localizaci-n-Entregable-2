@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 // libreria para definir los notaciones de campos en la base de datos
 using System.ComponentModel.DataAnnotations;
 
-namespace lib_entidades
+namespace lib_entidades.Modelos
 {
     public class Personas
     {

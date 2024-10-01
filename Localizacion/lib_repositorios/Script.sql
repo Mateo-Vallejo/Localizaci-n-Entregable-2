@@ -89,20 +89,20 @@ VALUES ('ITM', 'SEDE ROBLEDO',GETDATE(), 'Campus Universitario', 1);
 CREATE TABLE Localizaciones
 (
 	[Id] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-	[Persona] INT REFERENCES [Personas]([Id]),
-	[Localidad] INT REFERENCES [Localidades]([Id]),
-	[Ubicacion] INT REFERENCES [Ubicaciones]([Id]),
-	[Imagen] INT REFERENCES [Imagenes]([Id]),
-	[DetalleS] INT REFERENCES [DetallesImagenes]([Id]),
+	[personas] INT REFERENCES [Personas]([Id]),
+	[localidades] INT REFERENCES [Localidades]([Id]),
+	[ubicaciones] INT REFERENCES [Ubicaciones]([Id]),
+	[imagenes] INT REFERENCES [Imagenes]([Id]),
+	[detalles] INT REFERENCES [DetallesImagenes]([Id]),
 	[Hora] TIME NOT NULL,
  	[Activo] BIT
 );
 GO
 
-INSERT INTO [Localizaciones] ([Persona],[Localidad],[Ubicacion],[Imagen],[Detalles],[Hora],[Activo])
+INSERT INTO [Localizaciones] ([personas],[localidades],[ubicaciones],[imagenes],[Detalles],[Hora],[Activo])
 VALUES (1,1,1,1,1,GETDATE(),1);
 
-INSERT INTO [Localizaciones] ([Persona],[Localidad],[Ubicacion],[Imagen],[Detalles],[Hora],[Activo])
+INSERT INTO [Localizaciones] ([personas],[localidades],[ubicaciones],[imagenes],[Detalles],[Hora],[Activo])
 VALUES (2,2,2,2,2,GETDATE(),1);
 
 

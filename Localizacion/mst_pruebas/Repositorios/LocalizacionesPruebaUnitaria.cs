@@ -3,18 +3,19 @@ using lib_repositorios;
 using lib_repositorios.Implementaciones;
 using lib_repositorios.Interfaces;
 
-namespace mst_pruebas
+namespace mst_pruebas.Repositorios
 {
     [TestClass]
-    public class PruebaUnitariaLocalizaciones
+    public class LocalizacionesPruebaUnitaria
     {
         private ILocalizacionesRepositorio? iRepositorio = null;
         private Localizaciones? entidad = null;
 
-        public PruebaUnitariaLocalizaciones()
+        public LocalizacionesPruebaUnitaria()
         {
             var conexion = new Conexion();
-            conexion.StringConnection = "server=localhost;database=db_notas;uid=sa;pwd=Clas3sPrO2024_!;TrustServerCertificate=true;";
+            //conexion.StringConnection = "Server=CARZAXO\\DEV;Database=db_Localizacion;Integrated Security=True;TrustServerCertificate=True;";
+            conexion.StringConnection = "server=localhost;database=db_facturas;Integrated \r\nSecurity=True;TrustServerCertificate=true;";
             iRepositorio = new LocalizacionesRepositorio(conexion);
         }
         [TestMethod]
@@ -32,12 +33,15 @@ namespace mst_pruebas
         {
             entidad = new Localizaciones()
             {
+                
                 personas = 1,
-                ubicaciones = 1,
                 localidades = 1,
+                ubicaciones = 1,
                 imagenes = 1,
                 detalles = 1,
-                Hora = DateTime.Now,
+                Hora = DateTime.Now.TimeOfDay,
+                Activo = true,
+                
             };
             entidad = iRepositorio!.Guardar(entidad);
             Assert.IsTrue(entidad.Id != 0);
