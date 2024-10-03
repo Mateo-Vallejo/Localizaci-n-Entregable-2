@@ -61,5 +61,15 @@ namespace lib_repositorios.Implementaciones
         {
             return conexion!.Existe(condiciones);
         }
+
+        public void CalcularUbicacion()
+        {
+
+        }
+
+        public void MostrarUbicacion()
+        {
+
+        }
     }
 }
