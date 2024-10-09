@@ -2,12 +2,13 @@
 using lib_aplicaciones.Implementaciones;
 using lib_aplicaciones.Interfaces;
 using lib_entidades;
+using lib_entidades.Modelos;
 using lib_repositorios;
 using lib_repositorios.Implementaciones;
 using lib_utilidades;
 using Microsoft.AspNetCore.Mvc;
 
-namespace asp_servicios.Controllers
+namespace Localizacion.Backend.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]
