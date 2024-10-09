@@ -15,7 +15,7 @@ namespace mst_pruebas.Repositorios
         {
             var conexion = new Conexion();
             //conexion.StringConnection = "Server=CARZAXO\\DEV;Database=db_Localizacion;Integrated Security=True;TrustServerCertificate=True;";
-            conexion.StringConnection = "server=localhost;database=db_facturas;Integrated \r\nSecurity=True;TrustServerCertificate=true;";
+            conexion.StringConnection = "server=CARZAXO;database=db_Localizacion;Integrated \r\nSecurity=True;TrustServerCertificate=true;";
             iRepositorio = new LocalizacionesRepositorio(conexion);
         }
         [TestMethod]
