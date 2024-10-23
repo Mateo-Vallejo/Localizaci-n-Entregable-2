@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localizacion.Backend", "Localizacion.Backend\Localizacion.Backend.csproj", "{ECD78BF1-CE1D-4552-B82E-4BAF0BD6A683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asp_servicios", "Localizacion.Backend\asp_servicios.csproj", "{ECD78BF1-CE1D-4552-B82E-4BAF0BD6A683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lolizacion.Frontend", "Lolizacion.Frontend\Lolizacion.Frontend.csproj", "{9CDD9783-5784-48BA-9F0B-1ECB536D1225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asp_presentacion", "Lolizacion.Frontend\asp_presentacion.csproj", "{9CDD9783-5784-48BA-9F0B-1ECB536D1225}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_repositorios", "lib_repositorios\lib_repositorios.csproj", "{3D18E569-60F8-4040-9271-9066AB626F14}"
 EndProject
@@ -15,9 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_entidades", "lib_entida
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_aplicaciones", "lib_aplicaciones\lib_aplicaciones.csproj", "{5DF9D516-ADF1-4235-AAEE-4D27AA9ED34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_utilidades", "lib_utilidades\lib_utilidades.csproj", "{CA375696-A962-4649-957A-818F7B12AF9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_utilidades", "lib_utilidades\lib_utilidades.csproj", "{CA375696-A962-4649-957A-818F7B12AF9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf_presentation", "wpf_presentation\wpf_presentation.csproj", "{81FE502A-BACF-4B77-8BB5-36C769E4BF56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf_presentation", "wpf_presentation\wpf_presentation.csproj", "{81FE502A-BACF-4B77-8BB5-36C769E4BF56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentaciones", "1. Presentaciones", "{E788D7C9-C880-49C8-B6A9-BA07A8E7823D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Servicios", "2. Servicios", "{48128135-0319-48C4-8FF5-666563319BF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Comunes", "3. Comunes", "{F4BCEA7D-AC6B-429A-9098-52F434C06A31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Pruebas Unitarias", "4. Pruebas Unitarias", "{D26B6386-2744-45D0-AF90-294D00D78F98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +68,16 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECD78BF1-CE1D-4552-B82E-4BAF0BD6A683} = {48128135-0319-48C4-8FF5-666563319BF4}
+		{9CDD9783-5784-48BA-9F0B-1ECB536D1225} = {E788D7C9-C880-49C8-B6A9-BA07A8E7823D}
+		{3D18E569-60F8-4040-9271-9066AB626F14} = {48128135-0319-48C4-8FF5-666563319BF4}
+		{C8302374-3138-4DD7-8331-C0B0D704CD31} = {D26B6386-2744-45D0-AF90-294D00D78F98}
+		{702D647F-A3F1-41A6-8A59-37236146F62D} = {F4BCEA7D-AC6B-429A-9098-52F434C06A31}
+		{5DF9D516-ADF1-4235-AAEE-4D27AA9ED34B} = {48128135-0319-48C4-8FF5-666563319BF4}
+		{CA375696-A962-4649-957A-818F7B12AF9A} = {F4BCEA7D-AC6B-429A-9098-52F434C06A31}
+		{81FE502A-BACF-4B77-8BB5-36C769E4BF56} = {E788D7C9-C880-49C8-B6A9-BA07A8E7823D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7202E23-BC92-4CA1-8C3C-8D092B06AFB5}
