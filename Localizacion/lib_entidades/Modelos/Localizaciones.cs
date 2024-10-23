@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using lib_entidades.Modelos;
 
-namespace lib_entidades
+namespace lib_entidades.Modelos
 {
     public class Localizaciones
     {
