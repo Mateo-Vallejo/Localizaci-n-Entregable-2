@@ -27,11 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Comunes", "3. Comunes", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Pruebas Unitarias", "4. Pruebas Unitarias", "{D26B6386-2744-45D0-AF90-294D00D78F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_comunicaciones", "lib_comunicaciones\lib_comunicaciones.csproj", "{51EDF25B-D5B0-4AE8-86CA-21B421F88900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_comunicaciones", "lib_comunicaciones\lib_comunicaciones.csproj", "{51EDF25B-D5B0-4AE8-86CA-21B421F88900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_presentaciones", "lib_presentacion\lib_presentaciones.csproj", "{D0D69419-B95A-4354-9F2C-A6BC82379583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_presentaciones", "lib_presentacion\lib_presentaciones.csproj", "{D0D69419-B95A-4354-9F2C-A6BC82379583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_lenguajes", "lib_lenguajes\lib_lenguajes.csproj", "{2736B529-D11E-4C44-89B0-488D469A5CDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_lenguajes", "lib_lenguajes\lib_lenguajes.csproj", "{2736B529-D11E-4C44-89B0-488D469A5CDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,10 @@
-using Lolizacion.Frontend;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using asp_presentacion;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+var startup = new Startup(builder.Configuration);
+startup.ConfigureServices(builder, builder.Services);
 
-await builder.Build().RunAsync();
+var app = builder.Build();
+startup.Configure(app, app.Environment);
+app.Run();
