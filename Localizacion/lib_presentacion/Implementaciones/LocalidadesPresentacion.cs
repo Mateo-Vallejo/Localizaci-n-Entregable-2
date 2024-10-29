@@ -8,10 +8,12 @@ namespace lib_presentaciones.Implementaciones
     public class LocalidadesPresentacion : ILocalidadesPresentacion
     {
         private ILocalidadesComunicacion? iComunicacion = null;
+
         public LocalidadesPresentacion(ILocalidadesComunicacion iComunicacion)
         {
             this.iComunicacion = iComunicacion;
         }
+
         public async Task<List<Localidades>> Listar()
         {
             var lista = new List<Localidades>();
@@ -25,6 +27,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
+
         public async Task<List<Localidades>> Buscar(Localidades entidad, string tipo)
         {
             var lista = new List<Localidades>();
@@ -40,6 +43,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
+
         public async Task<Localidades> Guardar(Localidades entidad)
         {
             if (entidad.Id != 0 || !entidad.Validar())
@@ -57,6 +61,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
+
         public async Task<Localidades> Modificar(Localidades entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
@@ -74,6 +79,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
+
         public async Task<Localidades> Borrar(Localidades entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
@@ -91,6 +97,5 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
-
     }
 }

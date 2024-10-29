@@ -1,9 +1,5 @@
-﻿using lib_aplicaciones.Implementaciones;
-using lib_aplicaciones.Interfaces;
-using lib_entidades;
+﻿using lib_aplicaciones.Interfaces;
 using lib_entidades.Modelos;
-using lib_repositorios;
-using lib_repositorios.Implementaciones;
 using lib_repositorios.Interfaces;
 
 namespace lib_aplicaciones.Implementaciones

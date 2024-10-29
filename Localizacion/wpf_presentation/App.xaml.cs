@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
 namespace wpf_presentation
 {
@@ -10,5 +8,4 @@ namespace wpf_presentation
     public partial class App : Application
     {
     }
-
 }

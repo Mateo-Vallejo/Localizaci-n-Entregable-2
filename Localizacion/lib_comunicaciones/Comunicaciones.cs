@@ -1,4 +1,5 @@
 ﻿using lib_utilidades;
+
 namespace lib_comunicaciones
 {
     public class Comunicaciones
@@ -9,16 +10,19 @@ namespace lib_comunicaciones
         Nombre = string.Empty,
         Final = string.Empty,
         token = null;
+
         public Comunicaciones(string nombre)
         {
             Nombre = nombre;
         }
+
         public Dictionary<string, object> BuildUrl(Dictionary<string, object> data, string Metodo)
         {
             data["Url"] = Protocolo + Host + "/" + Servicio + Nombre + "/" + Metodo + Final;
             data["UrlToken"] = Protocolo + Host + "/" + Servicio + "Token/Autenticar" + Final;
             return data;
         }
+
         public async Task<Dictionary<string, object>> Execute(Dictionary<string, object> datos)
         {
             var respuesta = new Dictionary<string, object>();
@@ -58,6 +62,7 @@ namespace lib_comunicaciones
                 return respuesta;
             }
         }
+
         private async Task<Dictionary<string, object>> Authenticate(Dictionary<string, object> datos)
         {
             var respuesta = new Dictionary<string, object>();
@@ -93,6 +98,7 @@ namespace lib_comunicaciones
                 return respuesta;
             }
         }
+
         private string Replace(string resp)
         {
             return resp.Replace("\\\\r\\\\n", "")
@@ -116,4 +122,3 @@ namespace lib_comunicaciones
         }
     }
 }
-

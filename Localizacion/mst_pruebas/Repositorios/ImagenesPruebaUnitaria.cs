@@ -18,17 +18,20 @@ namespace mst_pruebas.Repositorios
             conexion.StringConnection = "server=localhost;database=db_facturas;Integrated \r\nSecurity=True;TrustServerCertificate=true;";
             iRepositorio = new ImagenesRepositorio(conexion);
         }
+
         [TestMethod]
         public void Ejecutar()
         {
             Listar();
             Guardar();
         }
+
         private void Listar()
         {
             var lista = iRepositorio!.Listar();
             Assert.IsTrue(lista.Count > 0);
         }
+
         private void Guardar()
         {
             entidad = new Imagenes()

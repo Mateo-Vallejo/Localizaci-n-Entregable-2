@@ -1,11 +1,6 @@
-﻿using lib_repositorios.Interfaces;
-using lib_entidades.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using lib_entidades.Modelos;
+using lib_repositorios.Interfaces;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lib_repositorios.Implementaciones
 {

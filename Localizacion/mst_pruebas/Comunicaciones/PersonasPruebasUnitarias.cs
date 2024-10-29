@@ -11,10 +11,12 @@ namespace mst_pruebas.Comunicaciones
         private IPersonasComunicacion? iComunicacion = null;
         private Personas? entidad = null;
         private List<Personas>? lista = null;
+
         public PersonasPruebaUnitaria()
         {
             iComunicacion = new PersonasComunicacion();
         }
+
         [TestMethod]
         public void Executar()
         {
@@ -24,6 +26,7 @@ namespace mst_pruebas.Comunicaciones
             Modificar();
             Borrar();
         }
+
         private void Listar()
         {
             var datos = new Dictionary<string, object>();
@@ -34,6 +37,7 @@ namespace mst_pruebas.Comunicaciones
             lista = JsonConversor.ConvertirAObjeto<List<Personas>>(
             JsonConversor.ConvertirAString(datos["Entidades"]));
         }
+
         private void Buscar()
         {
             var datos = new Dictionary<string, object>();
@@ -46,12 +50,12 @@ namespace mst_pruebas.Comunicaciones
             lista = JsonConversor.ConvertirAObjeto<List<Personas>>(
             JsonConversor.ConvertirAString(datos["Entidades"]));
         }
+
         public void Guardar()
         {
             var datos = new Dictionary<string, object>();
             entidad = new Personas()
             {
-                
             };
             datos["Entidad"] = entidad!;
             var task = iComunicacion!.Guardar(datos);
@@ -61,6 +65,7 @@ namespace mst_pruebas.Comunicaciones
             entidad = JsonConversor.ConvertirAObjeto<Personas>(
             JsonConversor.ConvertirAString(datos["Entidad"]));
         }
+
         public void Modificar()
         {
             var datos = new Dictionary<string, object>();
@@ -73,6 +78,7 @@ namespace mst_pruebas.Comunicaciones
             entidad = JsonConversor.ConvertirAObjeto<Personas>(
             JsonConversor.ConvertirAString(datos["Entidad"]));
         }
+
         public void Borrar()
         {
             var datos = new Dictionary<string, object>();
@@ -86,4 +92,3 @@ namespace mst_pruebas.Comunicaciones
         }
     }
 }
-

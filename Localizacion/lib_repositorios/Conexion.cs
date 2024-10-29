@@ -1,12 +1,6 @@
-﻿using lib_entidades;
-using lib_entidades.Modelos;
+﻿using lib_entidades.Modelos;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lib_repositorios
 {
@@ -23,11 +17,11 @@ namespace lib_repositorios
         protected DbSet<Personas>? Personas { get; set; }
         protected DbSet<Ubicaciones>? Ubicaciones { get; set; }
         protected DbSet<Localidades>? Localidades { get; set; }
-        protected DbSet<Imagenes>? Imagenes  { get; set; }
-        protected DbSet<DetallesImagenes>? DetallesImagenes  { get; set; }
-        protected DbSet<Localizaciones>? Localizaciones  { get; set; }
+        protected DbSet<Imagenes>? Imagenes { get; set; }
+        protected DbSet<DetallesImagenes>? DetallesImagenes { get; set; }
+        protected DbSet<Localizaciones>? Localizaciones { get; set; }
 
-    public virtual DbSet<T> ObtenerSet<T>() where T : class, new()
+        public virtual DbSet<T> ObtenerSet<T>() where T : class, new()
         {
             return this.Set<T>();
         }

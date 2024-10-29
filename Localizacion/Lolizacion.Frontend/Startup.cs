@@ -1,9 +1,4 @@
-﻿using lib_comunicaciones.Implementaciones;
-using lib_comunicaciones.Interfaces;
-using lib_presentaciones.Implementaciones;
-using lib_presentaciones.Interfaces;
-
-namespace asp_presentacion
+﻿namespace asp_presentacion
 {
     public class Startup
     {
@@ -20,7 +15,7 @@ namespace asp_presentacion
             services.AddScoped<INotasComunicacion, NotasComunicacion>();
             // Presentaciones
             services.AddScoped<INotasPresentacion, NotasPresentacion>();
-            
+
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddRazorPages();

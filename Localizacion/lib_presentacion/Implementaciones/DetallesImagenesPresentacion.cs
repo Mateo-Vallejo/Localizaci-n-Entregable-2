@@ -8,10 +8,12 @@ namespace lib_presentaciones.Implementaciones
     public class DetallesImagenesPresentacion : IDetallesImagenesPresentacion
     {
         private IDetallesImagenesComunicacion? iComunicacion = null;
+
         public DetallesImagenesPresentacion(IDetallesImagenesComunicacion iComunicacion)
         {
             this.iComunicacion = iComunicacion;
         }
+
         public async Task<List<DetallesImagenes>> Listar()
         {
             var lista = new List<DetallesImagenes>();
@@ -25,6 +27,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
+
         public async Task<List<DetallesImagenes>> Buscar(DetallesImagenes entidad, string tipo)
         {
             var lista = new List<DetallesImagenes>();
@@ -40,6 +43,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
+
         public async Task<DetallesImagenes> Guardar(DetallesImagenes entidad)
         {
             if (entidad.Id != 0 || !entidad.Validar())
@@ -57,6 +61,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
+
         public async Task<DetallesImagenes> Modificar(DetallesImagenes entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
@@ -74,6 +79,7 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
+
         public async Task<DetallesImagenes> Borrar(DetallesImagenes entidad)
         {
             if (entidad.Id == 0 || !entidad.Validar())
@@ -91,6 +97,5 @@ namespace lib_presentaciones.Implementaciones
             JsonConversor.ConvertirAString(respuesta["Entidad"]));
             return entidad;
         }
-
     }
 }
